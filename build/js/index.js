@@ -1,0 +1,2 @@
+"use strict";window.onscroll=function(){stickNavbarPosition()};var navbar=document.getElementById("navbar"),sticky=navbar.offsetTop;function stickNavbarPosition(){window.pageYOffset>=sticky?navbar.classList.add("sticky"):navbar.classList.remove("sticky")}
+//# sourceMappingURL=index.js.map

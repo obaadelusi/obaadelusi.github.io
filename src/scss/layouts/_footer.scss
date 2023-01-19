@@ -1,0 +1,18 @@
+// Add layout styling for your footer
+@use '../abstracts' as *;
+
+.footer {
+    border-bottom: 0.75em solid $grey-200;
+    display: flex;
+    justify-content: space-between;
+    padding: 0.5em 2em;
+
+    p {
+        color: $grey-400;
+        font-family: $heading-font;
+    }
+
+    em {
+        color: $grey-600;
+    }
+}

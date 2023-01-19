@@ -1,0 +1,42 @@
+// Add your button styles here
+@use '../abstracts' as *;
+
+.button {
+    appearance: none;
+    cursor: pointer;
+    display: inline-flex;
+    align-items: center;
+    justify-content: center;
+    gap: 10px;
+    font-size: $p;
+    padding: 0.8em 1em;
+    text-decoration: none;
+    width: fit-content;
+    // transition: background-color 300ms ease-in-out;
+
+    &--pry {
+        @extend .button;
+        border-radius: 0.5em;
+        color: $white;
+        font-weight: 500;
+        background: linear-gradient(to right, #000, #434343);
+        border: 1px solid transparent;
+
+        i {
+            color: $white;
+        }
+
+        &:hover {
+            background: $black;
+        }
+    }
+
+    &--close {
+        @extend .button;
+        background-color: transparent;
+        border: 1px solid #fff;
+        border-radius: 50%;
+        color: $sec-clr;
+        font-weight: 500;
+    }
+}

@@ -1,0 +1,35 @@
+/* Add all your variables here */
+
+// Font
+$font-stack: -apple-system, BlinkMacSystemFont, 'Inter', system-ui, sans-serif;
+$heading-font: 'DM Serif Display', system-ui, serif;
+
+// Text size
+$h1: clamp(3.5rem, 8vw, 5rem);
+$h2: clamp(2.75rem, 4vw, 4rem);
+$h3: clamp(1.625rem, 2.5vw, 2.25rem);
+$big-p: clamp(1.125rem, 2vw, 1.375rem);
+$p: clamp(1.0625rem, 1.5vw, 1.25rem);
+$small-p: clamp(1rem, 1.5vw, 1.125rem);
+
+// Colour
+$pry-hue: 228;
+$sec-hue: 37;
+
+$grey-700: #222;
+$grey-600: #444;
+$grey-500: #666;
+$grey-400: #888;
+$grey-300: #aaa;
+$grey-200: #ccc;
+$grey-100: #eee;
+
+$grey-bg: #f5f5f7;
+$tomato-red: #b21f1f;
+$link-blue: #0066cc;
+
+$black: #000;
+$white: #fff;
+
+$pry-clr: hsl($pry-hue, 61%, 26%);
+$sec-clr: hsl($sec-hue, 98%, 53%);

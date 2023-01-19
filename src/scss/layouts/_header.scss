@@ -1,0 +1,77 @@
+// Add layout styling for your header
+@use '../abstracts' as *;
+
+/**** Header, Navbar ****/
+.header {
+    //  position: sticky;
+    //  top: 0;
+    z-index: 100;
+    margin: 1em 0;
+    background: transparent;
+}
+
+.navbar {
+    display: flex;
+    flex-wrap: wrap;
+    align-items: center;
+    column-gap: 4em;
+    padding: 0.5em 0;
+
+    &__logo {
+        max-width: 200px;
+        //   margin-top: -50px;
+    }
+
+    &__links {
+        list-style-type: none;
+        display: flex;
+        justify-content: space-evenly;
+        padding: 0.875em 4px;
+        align-items: center;
+        width: 100%;
+        max-width: 500px;
+        background-color: $grey-bg;
+        border-radius: 14px;
+        background-color: $grey-bg;
+    }
+
+    hr {
+        height: 24px;
+        //   transform: rotateZ(10deg);
+        border: 1px solid $grey-300;
+    }
+
+    &__link {
+        font-weight: 400;
+        font-family: $heading-font;
+
+        a {
+            color: $black;
+        }
+    }
+}
+
+/**** Skip to content ****/
+a.skip-link {
+    position: fixed;
+    z-index: 1000;
+    top: 0;
+    left: 0;
+}
+.sr-only {
+    border: 0;
+    clip: rect(0, 0, 0, 0);
+    height: 40px;
+    margin: 1px;
+    overflow: hidden;
+    padding: 0;
+    position: absolute;
+    width: 80px;
+}
+
+/******************
+    Media Queries - Desktop
+*******************/
+
+@media (min-width: 768px) {
+}
