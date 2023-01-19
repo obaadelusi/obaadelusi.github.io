@@ -1,9 +1,9 @@
 <h1 align="center">Software Developer</h1>
 <h3 align="center">Hi 👋, I'm Oba</h3>
 
-[![whatobathinks.com](/images/whatobathinks-hero.PNG 'whatobathinks portfolio')](https://whatobathinks.com)
+[![obaadelusi.github.io](/images/whatobathinks.png 'whatobathinks logo')](https://obaadelusi.github.io)
 
--   🔭 I’m currently job searching as a **Junior Software Developer**
+-   🔭 I’m currently searching for a **Junior Software Developer** role.
 
 -   👯 I’m looking to collaborate on **MIS projects**
 
