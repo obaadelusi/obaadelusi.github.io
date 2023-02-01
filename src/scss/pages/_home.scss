@@ -239,7 +239,7 @@
             clip-path: polygon(0% 0%, 100% 0, 100% 100%, 50% 75%, 0% 100%);
             color: $sec-clr;
             position: absolute;
-            top: 0;
+            top: -2px;
             right: 2em;
             width: 32px;
             height: 40px;
@@ -253,7 +253,7 @@
         }
 
         &:hover {
-            border-color: $white;
+            border-color: $grey-500;
         }
     }
 }
@@ -332,6 +332,7 @@
         width: 100%;
         padding-top: 1.5em;
         padding-right: 1em;
+        resize: none;
     }
 
     &__form-control input:hover,
