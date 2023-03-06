@@ -164,7 +164,7 @@
         }
 
         &__more_link {
-            justify-self: baseline;
+            align-self: end;
         }
     }
 }
@@ -203,12 +203,13 @@
         transition: border-color 200ms ease-in-out;
 
         &__heading {
-            color: $grey-bg;
+            color: $white;
             margin-bottom: 0.5em;
         }
 
         &__badges {
             display: flex;
+            flex-wrap: wrap;
             gap: 0.5em;
             margin-bottom: 0.75em;
 
@@ -219,9 +220,6 @@
                 border-radius: 4px;
                 background-color: #2d2d2f;
                 color: $grey-bg;
-                // background: linear-gradient(to right, #1a2a6c, #b21f1f, $sec-clr);
-                // -webkit-text-fill-color: transparent;
-                // background-clip: text;
             }
         }
 
@@ -301,7 +299,7 @@
     }
 
     &__form-control label {
-        background-color: $white;
+        background-color: transparent;
         color: $grey-600;
         font-size: 1rem;
         font-weight: 500;
