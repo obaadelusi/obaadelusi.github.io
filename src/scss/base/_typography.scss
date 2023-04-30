@@ -1,61 +1,61 @@
-//  Add your typography rules here
 @use '../abstracts' as *;
 
+/*****************
+    Typography
+******************/
 body {
-    font-family: $font-stack;
+    font-family: $font-sans;
+}
+
+/* Heading Styles */
+h1,
+h2,
+h3,
+h4 {
+    font-weight: 500;
+    margin-bottom: 0.3em;
+    line-height: 1;
 }
 
 h1,
-h2,
-h3 {
-    font-family: $heading-font;
-    color: $black;
-    font-weight: 400;
+h2 {
+    font-family: $font-display;
 }
 
 h1 {
     font-size: $h1;
-    line-height: 1;
-    letter-spacing: 1px;
-    margin-bottom: 0.3em;
 }
 
 h2 {
     font-size: $h2;
-    line-height: 1;
-    margin-bottom: 0.3em;
 }
 
 h3 {
     font-size: $h3;
-    font-weight: 500;
-    line-height: 1.15;
-    margin-bottom: 0.3em;
 }
 
-/* List */
-p,
-li {
-    font-size: $p;
-    font-weight: 400;
-    line-height: 1.4;
-    color: $grey-600;
-}
-
-/* Links */
+/* Link Styles */
 a {
     font-size: inherit;
     color: $link-blue;
     text-decoration: underline 2px transparent;
     transition: text-decoration-color 200ms ease-in-out;
+
+    &:focus,
+    &:focus-visible {
+        border-color: $primary-clr;
+        outline-color: $primary-clr;
+    }
+
     &:hover {
         text-decoration-color: $link-blue;
     }
 }
 
-// Image caption
-figcaption {
-    text-align: center;
-    font-size: 0.875rem;
-    color: $grey-400;
+/* Paragraph Styles */
+p {
+    color: $text-clr;
+    font-size: $font-regular;
+    line-height: 1.4;
+    margin-bottom: 1em;
 }

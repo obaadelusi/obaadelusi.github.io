@@ -1,42 +1,84 @@
-// Add your button styles here
 @use '../abstracts' as *;
 
-.button {
-    appearance: none;
+/*****************
+    Buttons
+******************/
+button {
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    border: none;
     cursor: pointer;
+    outline: none;
+
+    &:focus,
+    &:focus-visible {
+        border-color: $primary-clr;
+        outline-color: $primary-clr;
+    }
+}
+
+.btn {
     display: inline-flex;
     align-items: center;
-    justify-content: center;
-    gap: 10px;
-    font-size: $p;
-    padding: 0.8em 1em;
-    text-decoration: none;
-    width: fit-content;
-    // transition: background-color 300ms ease-in-out;
+    gap: .25em;
+    border: 1.5px solid transparent;
+    border-radius: $border-radius--small;
+    font-size: 0.875rem;
+    font-weight: 600;
+    padding: 0.5em 0.625em;
+    transition: background-color 180ms ease-out, color 180ms ease-out;
 
-    &--pry {
-        @extend .button;
-        border-radius: 0.5em;
+    @media (min-width: 600px) {
+        padding: 0.75em 0.875em;
+    }
+
+    &:hover {
+        text-decoration: none;
+    }
+
+    &--black {
+        @extend .btn;
+        background-color: $black;
         color: $white;
-        font-weight: 500;
-        background: linear-gradient(to right, #000, #434343);
-        border: 1px solid transparent;
-
-        i {
-            color: $white;
-        }
 
         &:hover {
-            background: $black;
+            background-color: $grey-500
         }
     }
 
-    &--close {
-        @extend .button;
-        background-color: transparent;
-        border: 1px solid #fff;
-        border-radius: 50%;
-        color: $sec-clr;
-        font-weight: 500;
+    &-outline--black {
+        @extend .btn;
+        background-color: $white;
+        color: $black;
+        border-color: $black;
+
+        &:hover {
+            background-color: $black;
+            color: $white;
+        }
+    }
+
+    &--primary {
+        @extend .btn;
+        background-color: $primary-clr;
+        color: $white;
+
+        &:hover {
+            background-color: $white;
+            color: $primary-clr;
+        }
+    }
+
+    &-outline--primary {
+        @extend .btn;
+        background-color: $white;
+        color: $primary-clr;
+        border-color: $primary-clr;
+
+        &:hover {
+            background-color: $primary-clr;
+            color: $white;
+        }
     }
 }

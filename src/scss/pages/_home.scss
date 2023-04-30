@@ -1,77 +1,80 @@
 @use '../abstracts/' as *;
 
+/* Home Page Styles */
+
 /*****************
-    Common Styles
+    Main Container
 ******************/
-.section {
-    &__container {
-        padding: 70px 0 80px;
-    }
-
-    &__header {
-        margin-bottom: 2em;
-    }
-
-    &__heading,
-    &__description {
-        width: fit-content;
-        margin-left: auto;
-        margin-right: auto;
-    }
-
-    &__description {
-        color: $grey-500;
-    }
+.main {
+    margin: 0 auto;
+    padding: 0.25em 1em;
+    position: relative;
+    width: 100%;
+    max-width: 1000px;
 }
 
 /*****************
-    Hero section
+    Hero Section
 ******************/
 .hero {
-    background-color: $grey-bg;
-    border-radius: 1.25em;
     display: flex;
-    padding: 0 1.25em;
     flex-wrap: wrap;
-    position: relative;
-    height: 540px;
-    margin-bottom: 4em;
+    gap: 1em;
+    margin: 2em 0;
 
-    &__text_section {
-        margin: 2em 1em;
+    &__profile {
+        display: flex;
+        align-items: center;
+        justify-content: center;
+        flex: 1 1 480px;
+        gap: 1em;
+        background-color: $grey-bg;
+        border-radius: $border-radius--medium;
+        padding: 2em 1em;
+
+        &_image {
+            width: 110px;
+            height: 110px;
+            background-color: $white;
+            border-radius: 50%;
+            pointer-events: none;
+            user-select: none;
+
+            @media (min-width: 500px) {
+                width: 180px;
+                height: 180px;
+            }
+        }
+
+        &_name {
+            font-size: $h1;
+        }
+
+        &_title {
+            font-size: $h3;
+            font-family: $font-sans;
+            font-weight: 500;
+            -webkit-text-fill-color: transparent;
+            background: linear-gradient(to right, #1a2a6c, #b21f1f, #fda312);
+            -webkit-background-clip: text;
+            background-clip: text;
+            letter-spacing: -1px;
+            margin-bottom: .5em;
+        }
+
+        &_summary {
+            margin-bottom: 0;
+        }
     }
 
-    &__name {
-        font-size: clamp(3.5rem, 9vw, 6rem);
-        margin-bottom: 0.2em;
-    }
+    &__description {
+        background-color: $grey-bg;
+        border-radius: $border-radius--medium;
+        padding: 2.5em 2em;
+        flex: 1 1 300px;
 
-    &__position {
-        font-size: $h3;
-        letter-spacing: -1px;
-        margin-bottom: 0.5em;
-        background: linear-gradient(to right, #1a2a6c, #b21f1f, $sec-clr);
-        -webkit-text-fill-color: transparent;
-        background-clip: text;
-    }
-
-    &__social_links {
-        font-size: 18px;
-        color: $grey-400 !important;
-    }
-
-    &__image_section {
-        position: absolute;
-        bottom: 0;
-        right: -20px;
-        user-select: none;
-        pointer-events: none;
-
-        img {
-            width: 100%;
-            margin-bottom: -5px;
-            height: 100%;
-            // filter: grayscale(0.2);
+        p:last-of-type {
+            margin-bottom: 0;
         }
     }
 }
@@ -80,8 +83,7 @@
     About Section
 ******************/
 .about {
-    background-color: $grey-bg;
-    // padding: 70px 0 80px;
+    padding: 70px 0 80px;
 
     &__allcards {
         display: flex;
@@ -91,28 +93,18 @@
     }
 
     &__card {
-        background-color: $white;
+        background-color: $grey-bg;
         border-radius: 10px;
         padding: 3em 2.25em;
         flex: 1 1 300px;
-        // max-width: 400px;
 
         &_icon {
-            background-color: $grey-bg;
-            border-radius: 5px;
-            padding: 4px;
-            width: 40px;
-            height: 40px;
             display: flex;
-            justify-content: center;
             align-items: center;
-
-            i {
-                font-size: 1.5rem;
-                background: linear-gradient(#1a2a6c, #b21f1f, $sec-clr);
-                background-clip: text;
-                -webkit-text-fill-color: transparent;
-            }
+            justify-content: center;
+            font-size: 1.75rem;
+            height: 40px;
+            width: 40px;
         }
 
         &__heading {
@@ -122,279 +114,46 @@
 }
 
 /*****************
-    Blog Section
+    Newsletter Card
 ******************/
-.blog {
-    &__allcards {
-        display: flex;
-        justify-content: space-between;
-        gap: 1em;
-        flex-wrap: wrap;
-    }
-
-    &__card {
-        border-radius: 1em;
-        display: grid;
-        flex: 1 1 325px;
-        padding: 2.5em 2em;
-
-        &:hover {
-            background-color: $grey-bg;
-        }
-
-        &__heading {
-            color: $grey-600;
-        }
-
-        ul {
-            padding: 1em 0;
-        }
-
-        &__post_title {
-            list-style: none;
-            margin-bottom: 1em;
-
-            a {
-                color: $grey-700;
-
-                &:hover {
-                    color: $link-blue;
-                }
-            }
-        }
-
-        &__more_link {
-            align-self: end;
-        }
-    }
-}
-
-/*****************
-    Projects Section
-******************/
-.projects {
+.newsletter {
     background-color: $black;
+    border-radius: $border-radius--medium;
+    display: flex;
+    flex-wrap: wrap;
+    overflow: hidden;
+    margin-bottom: 3em;
 
-    .section {
-        &__heading {
+    &__image {
+        flex: 1 0 180px;
+        height: 180px;
+
+        img {
+            object-fit: cover;
+            width: 100%;
+            height: 100%;
+        }
+
+        @media (min-width: 600px) {
+            height: 240px;
+        }
+    }
+
+    &__body {
+        display: grid;
+        flex: 1 1 480px;
+        padding: 2em 2em;
+
+        h2 {
             color: $white;
         }
 
-        &__description {
+        p {
             color: $grey-200;
         }
     }
 
-    &__allcards {
-        display: flex;
-        justify-content: space-between;
-        gap: 2em;
-        flex-wrap: wrap;
-    }
-
-    &__card {
-        flex: 1 1 325px;
-        padding: 3em 2em;
-        border-radius: 10px;
-        position: relative;
-        box-shadow: 5px 5px 10px rgba(255, 255, 255, 0.05);
-        background-color: #1d1d1f;
-        border: 2px solid transparent;
-        transition: border-color 200ms ease-in-out;
-
-        &__heading {
-            color: $white;
-            margin-bottom: 0.5em;
-        }
-
-        &__badges {
-            display: flex;
-            flex-wrap: wrap;
-            gap: 0.5em;
-            margin-bottom: 0.75em;
-
-            span {
-                font-size: 0.75rem;
-                border-radius: 4px;
-                padding: 6px 10px;
-                border-radius: 4px;
-                background-color: #2d2d2f;
-                color: $grey-bg;
-            }
-        }
-
-        &__desc {
-            margin-bottom: 1em;
-            color: $grey-bg;
-        }
-
-        &__link {
-            color: #2997ff;
-        }
-
-        &:after {
-            content: '';
-            clip-path: polygon(0% 0%, 100% 0, 100% 100%, 50% 75%, 0% 100%);
-            color: $sec-clr;
-            position: absolute;
-            top: -2px;
-            right: 2em;
-            width: 32px;
-            height: 40px;
-        }
-
-        &:first-child::after {
-            background: linear-gradient(#093637, #44a08d);
-        }
-        &:nth-child(2)::after {
-            background: linear-gradient(#000468, #4b6cb7);
-        }
-
-        &:hover {
-            border-color: $grey-500;
-        }
-    }
-}
-
-/*****************
-    Contact section
-******************/
-.contact {
-    background-color: $grey-bg;
-    border-radius: 1.25em;
-    margin-top: 3em;
-    margin-bottom: 2em;
-
-    &__form-container {
-        display: flex;
-        flex-wrap: wrap;
-        background-color: $white;
-        border-radius: 1em;
-        justify-content: space-between;
-        max-height: 600px;
-        overflow: hidden;
-    }
-
-    &__form-group {
-        padding: 2em 1.5em;
-        flex: 1 1 400px;
-    }
-
-    &__form-image {
-        display: none;
-    }
-
-    &__form-control {
-        display: flex;
-        flex-direction: column;
-        gap: 6px;
-        border-radius: 0.5em;
-        position: relative;
-        height: 56px;
-        margin-bottom: 1em;
-
-        &-textarea {
-            height: auto;
-        }
-    }
-
-    &__form-control label {
-        background-color: transparent;
-        color: $grey-600;
-        font-size: 1rem;
-        font-weight: 500;
-        padding: 4px;
-        pointer-events: none;
-        position: absolute;
-        top: 0.875em;
-        left: 1.2em;
-        transition: all 200ms ease;
-    }
-
-    &__form-control input,
-    &__form-control textarea {
-        appearance: none;
-        border: 1px solid $grey-300;
-        border-radius: 0.375em;
-        height: 100%;
-        font-size: $p;
-        font-family: inherit;
-        outline: none;
-        padding-left: 1em;
-        padding-top: 0.7em;
-        transition: all 180ms ease;
-    }
-
-    &__form-control textarea {
-        height: 200px;
-        width: 100%;
-        padding-top: 1.5em;
-        padding-right: 1em;
-        resize: none;
-    }
-
-    &__form-control input:hover,
-    &__form-control textarea:hover {
-        box-shadow: 0 0 0 5px $grey-100;
-    }
-
-    &__form-control input:focus,
-    &__form-control textarea:focus {
-        outline: $pry-clr;
-        box-shadow: 0 0 0 4px $grey-200;
-    }
-
-    &__form-control input:focus + label,
-    &__form-control textarea:focus + label {
-        font-size: 12px;
-        top: 0.3em;
-    }
-
-    &__form-control input:not(:placeholder-shown) + label,
-    &__form-control textarea:not(:placeholder-shown) + label {
-        font-size: 12px;
-        top: 0.3em;
-        color: $grey-400;
-    }
-}
-
-/*****************
-    Media Queries - Desktop
-******************/
-
-/* Tablet & Computer */
-@media (min-width: 800px) {
-    .hero {
-        align-items: center;
-        height: 400px;
-        padding: 0 4em;
-    }
-
-    .contact {
-        min-height: 300px;
-
-        &__form-image {
-            display: inline;
-            max-height: 400px;
-            flex: 1 1 300px;
-
-            img {
-                object-fit: cover;
-                height: 100%;
-                width: 100%;
-                object-position: bottom center;
-            }
-        }
-    }
-}
-
-/* Large Desktop */
-@media (min-width: 1200px) {
-    .hero {
-        height: 520px;
-
-        &__image_section {
-            width: 55%;
-        }
+    &__cta {
+        align-self: end;
     }
 }

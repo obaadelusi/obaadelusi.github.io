@@ -1,77 +1,50 @@
-// Add layout styling for your header
 @use '../abstracts' as *;
 
-/**** Header, Navbar ****/
+/*****************
+    Header Section
+******************/
 .header {
-    //  position: sticky;
-    //  top: 0;
-    z-index: 100;
-    margin: 1em 0;
-    background: transparent;
-}
-
-.navbar {
     display: flex;
     flex-wrap: wrap;
-    align-items: center;
-    column-gap: 4em;
+    column-gap: 2em;
     padding: 0.5em 0;
 
     &__logo {
-        max-width: 200px;
-        //   margin-top: -50px;
+        max-width: 160px;
     }
 
-    &__links {
-        list-style-type: none;
+    &__nav_list {
+        background-color: $grey-bg;
+        border-radius: $border-radius--small;
         display: flex;
-        justify-content: space-evenly;
-        padding: 0.875em 4px;
         align-items: center;
-        width: 100%;
-        max-width: 500px;
-        background-color: $grey-bg;
-        border-radius: 14px;
-        background-color: $grey-bg;
-    }
+        gap: 1.25em;
+        list-style: none;
+        padding: 0.625em 1.75em;
 
-    hr {
-        height: 24px;
-        //   transform: rotateZ(10deg);
-        border: 1px solid $grey-300;
-    }
+        li:not(:last-of-type) {
+            border-right: 2px solid $grey-300;
+            padding-right: 1.25em;
+        }
 
-    &__link {
-        font-weight: 400;
-        font-family: $heading-font;
-
-        a {
+        li a {
             color: $black;
+            font-family: $font-display;
+            font-size: 1.125rem;
         }
     }
-}
 
-/**** Skip to content ****/
-a.skip-link {
-    position: fixed;
-    z-index: 1000;
-    top: 0;
-    left: 0;
-}
-.sr-only {
-    border: 0;
-    clip: rect(0, 0, 0, 0);
-    height: 40px;
-    margin: 1px;
-    overflow: hidden;
-    padding: 0;
-    position: absolute;
-    width: 80px;
-}
+    &__menu-icon {
+        background-color: $grey-bg;
+        border-radius: .25em;
+        color: $black;
+        position: absolute;
+        top: 0.625em;
+        right: 2em;
+        padding: 0.4em 0.5em;
 
-/******************
-    Media Queries - Desktop
-*******************/
-
-@media (min-width: 768px) {
+        &:hover {
+            background-color: $grey-200;
+        }
+    }
 }

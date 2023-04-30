@@ -1,8 +1,9 @@
 @use 'base/base';
+@use 'base/defaults';
 @use 'base/typography';
-@use 'base/containers';
 @use 'components/buttons';
-@use 'components/cards';
+@use 'components/figures';
+@use 'components/modals';
 @use 'layouts/header';
 @use 'layouts/footer';
 @use 'layouts/forms';

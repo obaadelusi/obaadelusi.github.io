@@ -1,4 +1,6 @@
-/* Oba's Reset/Base */
+/*****************
+    Reset/Base
+******************/
 html {
     scroll-behavior: smooth;
 }
@@ -12,21 +14,22 @@ html {
 }
 
 body {
-    min-height: 100vh;
-    max-width: 1800px;
     margin: auto;
+    min-height: 100vh;
     position: relative;
 }
 
 img,
 picture {
+    display: block;
     max-width: 100%;
 }
 
 button,
-input {
-    font-family: inherit;
+input,
+textarea {
     appearance: none;
+    font: inherit;
 }
 
 ul,
