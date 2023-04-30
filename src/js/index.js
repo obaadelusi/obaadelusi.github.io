@@ -37,27 +37,27 @@ function showModal() {
     closeModalBtn.addEventListener("click", () => {
         modal.classList.remove("show");
 
-        window.location.replace("https://obafunsho.github.io");
+        window.location.replace("https://obaadelusi.github.io");
     });
 }
 
 function formHasErrors() {
     let hasErrors = false;
 
-    const phoneValue = document.getElementById("phone").value;
+    // const phoneValue = document.getElementById("phone").value;
     const emailValue = document.getElementById("email").value;
 
     if (formInputIsEmpty()) {
         hasErrors = true;
     }
 
-    const phoneRegex = new RegExp(/^(\+\d{1,2}\s?)?\(?\d{3}\)?[\s.-]?\d{3}[\s.-]?\d{4}$/);
-    const phoneIsValid = phoneRegex.test(trim(phoneValue));
+    // const phoneRegex = new RegExp(/^(\+\d{1,2}\s?)?\(?\d{3}\)?[\s.-]?\d{3}[\s.-]?\d{4}$/);
+    // const phoneIsValid = phoneRegex.test(trim(phoneValue));
 
-    if (trim(phoneValue).length > 0 && !phoneIsValid) {
-        document.getElementById(`phoneformat_error`).style.display = "block";
-        hasErrors = true;
-    }
+    // if (trim(phoneValue).length > 0 && !phoneIsValid) {
+    //     document.getElementById(`phoneformat_error`).style.display = "block";
+    //     hasErrors = true;
+    //}
 
     const emailRegex = new RegExp(/^[\w-\.]+@([\w-]+\.)+[\w-]{2,4}$/);
     const emailIsValid = emailRegex.test(trim(emailValue));
@@ -74,11 +74,11 @@ function formInputIsEmpty() {
     let inputIsEmpty = false;
 
     const nameInput = document.getElementById("name"),
-        phoneInput = document.getElementById("phone"),
+        // phoneInput = document.getElementById("phone"),
         emailInput = document.getElementById("email"),
         messageTxt = document.getElementById("message");
 
-    const contactInputs = [messageTxt, emailInput, phoneInput, nameInput];
+    const contactInputs = [messageTxt, emailInput, nameInput];
 
     for (const input of contactInputs) {
         if (trim(input.value).length == 0) {
