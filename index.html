@@ -1,205 +1,174 @@
 <!DOCTYPE html>
 <html lang="en">
-    <head>
-        <meta charset="UTF-8" />
-        <meta http-equiv="X-UA-Compatible" content="IE=edge" />
-        <meta name="viewport" content="width=device-width, initial-scale=1.0" />
-        <title>Oba Adelusi - Software Developer in Canada | whatobathinks</title>
-        <meta name="description" content="Obafunsho Adelusi is a Frontend Developer in Canada. He uses software to help solve business problems. View portfolio." />
-        <link rel="shortcut icon" href="images/favicon.ico" type="image/x-icon" />
-        <script src="https://kit.fontawesome.com/f596fb3afb.js" crossorigin="anonymous"></script>
-        <link rel="preconnect" href="https://fonts.gstatic.com" />
-        <link href="https://fonts.googleapis.com/css2?family=Inter:wght@400;500;600;700&family=DM+Serif+Display:wght@400;700&display=swap" rel="stylesheet" />
-        <link rel="stylesheet" href="build/css/main.css" />
-    </head>
 
-    <body>
-        <!-- Header -->
-        <header class="header">
-            <a href="#content" class="skip-link sr-only">Skip to content</a>
-            <nav class="navbar container">
-                <div class="navbar__logo">
-                    <img src="./images/whatobathinks.png" alt="whatobathinks logo" />
+<head>
+    <meta charset="UTF-8" />
+    <meta http-equiv="X-UA-Compatible" content="IE=edge" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>Oba Adelusi &mdash; Software Developer in Canada</title>
+    <meta name="description"
+        content="Obafunsho Adelusi is a Software Developer in Manitoba. He loves to write, design, and code.">
+
+    <link rel="shortcut icon" href="images/favicon.ico" type="image/x-icon" />
+    <link rel="preconnect" href="https://fonts.googleapis.com" />
+    <link rel="stylesheet"
+        href="https://fonts.googleapis.com/css2?family=DM+Serif+Display&family=Inter:wght@400;500;600;700&display=swap" />
+    <link rel="stylesheet"
+        href="https://fonts.googleapis.com/css2?family=Material+Symbols+Outlined:opsz,wght,FILL,GRAD@48,400,0,0" />
+
+    <link rel="stylesheet" href="build/css/main.css" />
+</head>
+
+<body>
+    <div class="container">
+        <main class="main">
+            <header class="header">
+                <div class="header__logo">
+                    <a href="/"><img src="images/obaadelusi-logo.png" alt="logo" /></a>
                 </div>
-                <ul class="navbar__links">
-                    <li class="navbar__link"><a href="/about">About</a></li>
-                    <hr />
-                    <li class="navbar__link"><a href="/blog">Blog</a></li>
-                    <hr />
-                    <li class="navbar__link"><a href="/projects">Projects</a></li>
-                    <hr />
-                    <li class="navbar__link"><a href="/contact">Contact</a></li>
+                <ul class="header__nav_list">
+                    <li><a class="nav__link" href="/">Home</a></li>
+                    <li><a class="nav__link" href="portfolio.html">Portfolio</a></li>
+                    <li>
+                        <a class="nav__link" href="contact.html">Contact</a>
+                    </li>
                 </ul>
-            </nav>
-        </header>
-
-        <!-- Hero section -->
-        <section class="hero container" id="content">
-            <div class="hero__text_section">
-                <h1 class="hero__name">
-                    Oba<br />
-                    Adelusi
-                </h1>
-                <p class="hero__position">Software Developer</p>
-                <div class="hero__social_links">
-                    <a href="https://linkedin.com/in/obaadelusi">Linkedin</a> /
-                    <a href="https://github.com/obaadelusi">GitHub</a>
-                </div>
-            </div>
-
-            <div class="hero__image_section">
-                <img src="./images/oba_suited.png" alt="oba adelusi" />
-            </div>
-        </section>
-
-        <!-- About section -->
-        <section class="about section__container container-fluid">
-            <header class="section__header">
-                <h2 class="section__heading">About</h2>
-                <p class="section__description">iWrite. iDesign. iCode</p>
+                <button class="header__menu-icon" id="menu-icon">
+                    <span class="material-symbols-outlined"> menu</span>
+                </button>
             </header>
 
-            <div class="about__allcards container">
-                <div class="about__card">
-                    <div class="about__card_icon">
-                        <i class="fas fa-pen-alt"></i>
+            <!-- Hero section -->
+            <section class="hero">
+                <div class="hero__profile">
+                    <div class="hero__profile_image">
+                        <img src="images/oba.png" alt="Oba Adelusi" />
                     </div>
-                    <h3 class="about__card__heading">iWrite</h3>
-                    <p class="about__card__description">From documentation to poetry, no genre shall escape my grasp.</p>
-                </div>
-                <div class="about__card">
-                    <div class="about__card_icon">
-                        <i class="fas fa-palette"></i>
+                    <div class="hero__profile_info">
+                        <h1 class="hero__profile_name">Oba Adelusi</h1>
+                        <h2 class="hero__profile_title">Software Developer</h2>
+                        <p class="hero__profile_link">
+                            <a href="https://linkedin.com/in/obaadelusi">LinkedIn</a> /
+                            <a href="https://github.com/obafunsho">GitHub</a>
+                        </p>
                     </div>
-                    <h3 class="about__card__heading">iDesign</h3>
-                    <p class="about__card__description">System Design? Design System? UI Design? Well, yes!</p>
                 </div>
-                <div class="about__card">
-                    <div class="about__card_icon">
-                        <i class="fas fa-code"></i>
+                <div class="hero__description">
+                    <p>
+                        Hi 👋,<br />
+                        I'm a full-stack Software Developer based out of Winnipeg with 2 years experience in web and
+                        application development.
+                    </p>
+                    <p>Here you'll find my articles and case studies on all
+                        things development.</p>
+                </div>
+            </section>
+
+            <!-- About section -->
+            <section class="about">
+                <header class="section-header">
+                    <h2>About</h2>
+                    <p>iWrite. iDesign. iCode</p>
+                </header>
+
+                <div class="about__allcards">
+                    <div class="about__card">
+                        <div class="about__card_icon">
+                            <span>✍</span>
+                        </div>
+                        <h3 class="about__card__heading">iWrite</h3>
+                        <p class="about__card__description">Articles about my projects
+                            and
+                            dev journey on my blog and newsletter.</p>
                     </div>
-                    <h3 class="about__card__heading">iCode</h3>
-                    <p class="about__card__description">Lorem ipsum dolor sit amet consectetur adipisicing elit.</p>
-                </div>
-            </div>
-        </section>
-
-        <!-- Blog Section -->
-        <section class="blog section__container container-fluid">
-            <header class="section__header">
-                <h2 class="section__heading">Blog</h2>
-                <p class="section__description">iWrite. iPublish</p>
-            </header>
-
-            <div class="blog__allcards container">
-                <div class="blog__card">
-                    <h3 class="blog__card__heading">Java</h3>
-                    <ul>
-                        <li class="blog__card__post_title"><a href="#">Lorem ipsum dolor sit amet Lorem, ipsum dolor adipisicing elit.</a></li>
-                        <li class="blog__card__post_title"><a href="#">Lorem ipsum, dolor sit amet Lorem, ipsum dolor adipisicing.</a></li>
-                        <li class="blog__card__post_title"><a href="#">Lorem ipsum dolor sit amet Lorem, ipsum dolor.</a></li>
-                    </ul>
-                    <a href="#" class="blog__card__more_link">All 23 Java posts &gt;</a>
-                </div>
-                <div class="blog__card">
-                    <h3 class="blog__card__heading">C#</h3>
-                    <ul>
-                        <li class="blog__card__post_title"><a href="#">Lorem ipsum dolor sit ba bula amet, ipsum dolor adipisicing elit.</a></li>
-                        <li class="blog__card__post_title"><a href="#">Lorem ipsum, dolor sit oba lorem ba amet, ipsum dolor adipisicing.</a></li>
-                        <li class="blog__card__post_title"><a href="#">Lorem ipsum dolor sit oba ba bula amet Lorem, ipsum dolor.</a></li>
-                    </ul>
-                    <a href="#" class="blog__card__more_link">All 21 C# posts &gt;</a>
-                </div>
-                <div class="blog__card">
-                    <h3 class="blog__card__heading">HTML & CSS</h3>
-                    <ul>
-                        <li class="blog__card__post_title"><a href="#">Lorem ipsum dolor sit amet lorem, ipsum dolor elit.</a></li>
-                        <li class="blog__card__post_title"><a href="#">Lorem ipsum, dolor sit amet korem, ipsum dolor adipisicing.</a></li>
-                        <li class="blog__card__post_title"><a href="#">Lorem ipsum dolor sit amet lorem, ipsum dolor.</a></li>
-                    </ul>
-                    <a href="#" class="blog__card__more_link">All 53 HTML & CSS posts &gt;</a>
-                </div>
-                <div class="blog__card">
-                    <h3 class="blog__card__heading">Design Patterns & Architecture</h3>
-                    <ul>
-                        <li class="blog__card__post_title"><a href="#">Lorem ipsum dolor sit amet lorem, ipsum dolor adipisicing elit.</a></li>
-                        <li class="blog__card__post_title"><a href="#">Lorem ipsum, dolor sit amet lorem, ipsum dolor adipisicing.</a></li>
-                        <li class="blog__card__post_title"><a href="#">Lorem ipsum dolor sit amet lorem, ipsum dolor.</a></li>
-                    </ul>
-                    <a href="#" class="blog__card__more_link">All 48 Design Patterns posts &gt;</a>
-                </div>
-            </div>
-        </section>
-
-        <!-- Projects Section -->
-        <section class="projects section__container container-fluid">
-            <header class="section__header">
-                <h2 class="section__heading">Projects</h2>
-                <p class="section__description">iCode. iDeploy.</p>
-            </header>
-
-            <div class="projects__allcards container">
-                <div class="projects__card">
-                    <h3 class="projects__card__heading">Enterprise Resource Planning (ERP)</h3>
-                    <div class="projects__card__badges">
-                        <span>3+ Modules</span>
-                        <span>React</span>
-                        <span>NodeJS</span>
-                        <span>MySQL</span>
-                        <span>Docker</span>
+                    <div class="about__card">
+                        <div class="about__card_icon">
+                            <span>🎨</span>
+                        </div>
+                        <h3 class="about__card__heading">iDesign</h3>
+                        <p class="about__card__description">Beautiful and accessible user
+                            interfaces for the best user experience.</p>
                     </div>
-                    <p class="projects__card__desc">A web application built on microservices architecture for small businesses to track their day-to-day activities.</p>
-                    <a href="#" class="projects__card__link">See AIS project &gt;</a>
+                    <div class="about__card">
+                        <div class="about__card_icon">
+                            <span>👨‍💻</span>
+                        </div>
+                        <h3 class="about__card__heading">iCode</h3>
+                        <p class="about__card__description">Front-end and back-end web applications, and websites for
+                            businesses.
+                        </p>
+                    </div>
                 </div>
+            </section>
 
-                <div class="projects__card">
-                    <h3 class="projects__card__heading">Inventory Management System (IMS)</h3>
-                    <div class="projects__card__badges">
-                        <span>Angular</span>
+            <section class="newsletter">
+                <div class="newsletter__image">
+                    <img src="https://images.unsplash.com/photo-1542744094-24638eff58bb?ixlib=rb-4.0.3&ixid=MnwxMjA3fDB8MHxwaG90by1wYWdlfHx8fGVufDB8fHx8&auto=format&fit=crop&w=2071&q=80"
+                        loading="lazy" alt="man writing on board" />
+                </div>
+                <div class="newsletter__body">
+                    <h2>Join My Newsletter</h2>
+                    <p>Get collation of front-end and back-end programming articles directly in your inbox. Click
+                        Subscribe ✨.
+                    </p>
+                    <div class="newsletter__cta">
+                        <a href="https://whatobathinks.substack.com" target="_blank" class="btn--primary"> <span
+                                class="material-symbols-outlined">auto_awesome</span> Subscribe</a>
+                    </div>
+                </div>
+            </section>
+
+            <footer class="footer">
+                <nav class="footer__nav">
+                    <a class="footer__logo" href="/">
+                        <img src="images/obaadelusi-logo.png" alt="logo">
+                    </a>
+                    <ul class="footer__links">
+                        <li><a href="/">Home</a></li>
+                        <li><a href="portfolio.html">Portfolio</a></li>
+                        <li><a href="contact.html">Contact</a></li>
+                    </ul>
+                </nav>
+                <small class="footer__copyright">© 2023 • Built by Oba Adelusi</small>
+            </footer>
+        </main>
+        <aside class="sidebar" id="sidebar">
+            <div class="sidebar-container">
+                <header class="sidebar__header">
+                    <a href="contact.html" class="btn--black">Contact Me</a>
+                    <input type="search" name="q" id="search" placeholder="Search..." />
+                </header>
+                <section class="sidebar__all-skills">
+                    <h2>Technical skills</h2>
+                    <div class="sidebar__skills">
+                        <span>Java</span>
+                        <span>HTML</span>
+                        <span>CSS</span>
+                        <span>Sass</span>
+                        <span>JavaScript</span>
+                        <span>Gulp</span>
                         <span>C#</span>
-                        <span>PostgreSQL</span>
+                        <span>React</span>
+                        <span>ASP.NET</span>
+                        <span>NodeJS</span>
+                        <span>SQL</span>
+                        <span>Agile</span>
+                        <span>UML</span>
                     </div>
-                    <p class="projects__card__desc">A desktop application built for Lorem ipsum dolor sit amet Lorem, ipsum dolor.</p>
-                    <a href="#" class="projects__card__link">See IMS project &gt;</a>
-                </div>
-            </div>
-        </section>
-
-        <section class="contact section__container container">
-            <header class="section__header">
-                <h2 class="section__heading">Contact me</h2>
-                <p class="section__description">iSmile. iReply.</p>
-            </header>
-
-            <div class="contact__form-container container">
-                <form action="mailto:whatobathinks@gmail.com" class="contact__form-group">
-                    <div class="contact__form-control">
-                        <input type="text" id="subject" name="subject" placeholder=" " />
-                        <label for="subject">Subject</label>
+                    <h2>Soft skills</h2>
+                    <div class="sidebar__skills">
+                        <span>Team work</span>
+                        <span>Communication</span>
+                        <span>Problem-solving</span>
+                        <span>Attention to detail</span>
+                        <span>Time management</span>
                     </div>
-                    <div class="contact__form-control contact__form-control-textarea">
-                        <textarea name="body" id="body" placeholder=" "></textarea>
-                        <label for="body">Message</label>
-                    </div>
-                    <button type="submit" class="form__button">Send <i class="fa fa-paper-plane"></i></button>
-                </form>
-
-                <div class="contact__form-image">
-                    <img src="/images/oba_side.png" alt="Oba" />
-                </div>
+                </section>
             </div>
-        </section>
+        </aside>
+    </div>
 
-        <!-- Footer section -->
-        <footer class="footer container-fluid">
-            <p>&copy; what<em>oba</em>thinks</p>
-            <div class="footer__social_links">
-                <a href="https://linkedin.com/in/obaadelusi">Linkedin</a> /
-                <a href="https://github.com/obaadelusi">GitHub</a>
-            </div>
-        </footer>
+    <script defer src="build/js/index.js"></script>
+</body>
 
-        <!-- js -->
-        <!-- <script src="build/js/index.js"></script> -->
-    </body>
 </html>
