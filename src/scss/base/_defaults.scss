@@ -52,14 +52,10 @@ textarea {
 
 /* Page Heading */
 .page-heading {
-    background-color: $grey-bg;
+    // background-color: $grey-bg;
     border-radius: $border-radius--medium;
     margin-top: 1em;
-    padding: 3em;
-
-    span {
-        color: $primary-clr;
-    }
+    padding: 3em 0;
 
     p {
         margin-bottom: 0;

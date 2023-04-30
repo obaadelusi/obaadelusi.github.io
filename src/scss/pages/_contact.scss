@@ -1,0 +1,22 @@
+@use '../abstracts' as *;
+
+/* Contact Page Styles */
+
+/*****************
+    Contact Form
+******************/
+.contact {
+    background-color: $grey-bg;
+    border-radius: $border-radius--medium;
+    margin: 2em auto;
+    max-width: 500px;
+    padding: 3em 2em;
+
+    .btn--black {
+        padding: .75em 2em;
+
+        &:hover {
+            background-color: $primary-clr;
+        }
+    }
+}
