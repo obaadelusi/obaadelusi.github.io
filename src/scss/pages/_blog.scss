@@ -16,7 +16,7 @@
     &__post-item {
         display: flex;
         border-bottom: 2px solid $grey-200;
-        gap: .5em;
+        gap: 0.5em;
         padding: 1.5em 0;
 
         @media (min-width: 600px) {
@@ -89,7 +89,7 @@
             }
 
             @media (min-width: 600px) {
-                width: 180px;
+                width: 220px;
                 height: 180px;
             }
         }
