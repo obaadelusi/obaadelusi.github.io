@@ -1,0 +1,180 @@
+@use '../abstracts' as *;
+
+/* Single Post Page Styles */
+
+/*****************
+    Content Section
+******************/
+.post {
+    @media (min-width:800px) {
+        padding: 0 3em 0 0;
+    }
+
+    &__header {
+        margin-top: 6em;
+    }
+
+    &__title {
+        font-size: calc($h1 + 1vw);
+        line-height: 1.25em;
+    }
+
+    &__excerpt {
+        color: $grey-500;
+        font-size: $h3;
+        margin-bottom: 1em;
+        line-height: 1.5em;
+    }
+
+    // &__featured {
+    //     height: 480px;
+
+    //     img {
+    //         object-fit: cover;
+    //         object-position: center;
+    //         height: 100%;
+    //         width: 100%;
+    //         margin-bottom: 0.5em;
+    //     }
+    // }
+
+    &__author {
+        display: flex;
+        align-items: center;
+        gap: .5em;
+
+        &-image {
+            background-color: $grey-200;
+            border-radius: 50%;
+            overflow: hidden;
+            height: 40px;
+            width: 40px;
+        }
+
+        &-text i {
+            color: $grey-400;
+        }
+    }
+
+    &__share {
+        padding: 0;
+        list-style: none;
+        display: flex;
+        gap: .5em;
+        margin: 1em 0;
+
+
+        li {
+            background-color: $grey-100;
+            border-radius: $border-radius--medium;
+            color: $grey-500;
+            display: inline-flex;
+            align-items: center;
+            gap: .5em;
+            font-size: $font-medium;
+            padding: .5em .875em;
+
+            span {
+                font-size: $font-medium;
+                color: $primary-clr;
+            }
+        }
+    }
+
+    &__content {
+        padding: 2em 0;
+        margin: 1em auto 1em 0;
+        border-bottom: 1px solid $grey-200;
+
+        a {
+            text-decoration-line: underline;
+        }
+
+        code {
+            background-color: $primary-100;
+            border: 2px solid $grey-200;
+            border-radius: $border-radius--small;
+            color: hsl(10, 90%, 40%);
+            font-family: $font-mono;
+            font-size: clamp($font-medium, 2vw, $font-regular);
+            padding: .125em .25em;
+        }
+
+        em code {
+            background-color: hsl($primary-hue, 45%, 35%);
+            color: $white;
+        }
+
+        h2,
+        h3,
+        h4 {
+            margin-top: 1.25em;
+            line-height: 1.2;
+        }
+
+        ol,
+        ul {
+            padding-inline-start: 1.5em;
+        }
+
+        p,
+        li {
+            font-size: $h4;
+            line-height: 1.75;
+            margin-bottom: 1.5em;
+        }
+
+        li:not(:last-of-type) {
+            line-height: 1.5;
+            margin-bottom: 1em;
+        }
+
+        @media (min-width: 600px) {
+            max-width: 700px;
+        }
+    }
+
+    &__meta {
+        border-bottom: 1px solid $grey-200;
+        padding: 0.5em 0 1.5em;
+
+        &_container {
+            background-color: $grey-bg;
+            border-radius: $border-radius--medium;
+            padding: 1.5em 1em;
+        }
+
+        &_categories,
+        &_tags {
+            display: flex;
+            gap: .5em;
+            align-items: baseline;
+
+            h4,
+            p {
+                margin: 0;
+            }
+        }
+    }
+}
+
+/*****************
+    Related Posts Section
+******************/
+.related {
+    border-top: 1px solid $grey-200;
+    padding: 2em 0;
+
+    &__title {
+        margin-bottom: .25em;
+    }
+
+    &__posts {
+        list-style: inside;
+        padding: 0;
+
+        li {
+            margin: 1em 0;
+        }
+    }
+}
