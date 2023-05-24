@@ -26,7 +26,8 @@
 
         &__content {
             display: grid;
-            flex: 1 1 70%;
+            flex: 0 1 76%;
+            margin-top: 0.5em;
 
             h3 {
                 font-size: $h3;

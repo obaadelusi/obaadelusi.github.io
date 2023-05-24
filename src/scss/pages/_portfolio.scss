@@ -19,7 +19,7 @@
         &::before {
             content: counter(projectIndex);
             position: absolute;
-            top: -1em;
+            top: 1em;
             right: 1em;
             display: flex;
             justify-content: center;
@@ -29,9 +29,15 @@
             border: 2px solid $grey-200;
             color: $text-clr;
             font-size: $h4;
-            height: 40px;
-            width: 40px;
+            height: 35px;
+            width: 35px;
             z-index: 10;
+        }
+
+        &:first-of-type::before {
+            background-color: hsl($primary-hue, 12%, 10%);
+            border-color: hsl($primary-hue, 12%, 30%);
+            color: $grey-300;
         }
     }
 

@@ -1,12 +1,13 @@
 document.addEventListener("DOMContentLoaded", load);
 
 function load() {
-    // Show/hide sidebar
+    // Show/hide sidebar/mobileMenu
     const menuIcon = document.getElementById("menu-icon"),
-        sidebar = document.getElementById("sidebar");
+        // sidebar = document.getElementById("sidebar"),
+        mobileMenu = document.getElementById("mobile-menu");
 
     menuIcon.addEventListener("click", () => {
-        sidebar.classList.toggle("show");
+        mobileMenu.classList.toggle("active");
     });
 
     // Validate form

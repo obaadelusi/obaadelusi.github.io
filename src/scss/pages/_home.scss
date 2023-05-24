@@ -22,6 +22,10 @@
     gap: 1em;
     margin: 2em 0;
 
+    @media (max-width: 500px) {
+        margin-top: 1em;
+    }
+
     &__profile {
         display: flex;
         align-items: center;
