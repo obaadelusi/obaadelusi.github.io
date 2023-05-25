@@ -15,7 +15,7 @@
     }
 
     &__title {
-        font-size: calc($h1 + 1vw);
+        font-size: calc($h1 + 0.5vw);
         line-height: 1.25em;
     }
 
@@ -26,17 +26,29 @@
         line-height: 1.5em;
     }
 
-    // &__featured {
-    //     height: 480px;
+    &__featured {
+        height: 220px;
 
-    //     img {
-    //         object-fit: cover;
-    //         object-position: center;
-    //         height: 100%;
-    //         width: 100%;
-    //         margin-bottom: 0.5em;
-    //     }
-    // }
+        @media screen and (min-width: 440px) {
+            height: 340px;
+        }
+
+        @media screen and (min-width: 640px) {
+            height: 400px;
+        }
+
+        @media screen and (min-width: 800px) {
+            height: 480px;
+        }
+
+        img {
+            object-fit: cover;
+            object-position: bottom center;
+            height: 100%;
+            width: 100%;
+            margin-bottom: 0.5em;
+        }
+    }
 
     &__author {
         display: flex;
@@ -60,19 +72,23 @@
         padding: 0;
         list-style: none;
         display: flex;
+        flex-wrap: wrap;
         gap: .5em;
         margin: 1em 0;
 
 
         li {
-            background-color: $grey-100;
+            background-color: $grey-bg;
             border-radius: $border-radius--medium;
-            color: $grey-500;
             display: inline-flex;
             align-items: center;
             gap: .5em;
             font-size: $font-medium;
             padding: .5em .875em;
+
+            a {
+                color: $text-clr;
+            }
 
             span {
                 font-size: $font-medium;
@@ -110,6 +126,11 @@
         h4 {
             margin-top: 1.25em;
             line-height: 1.2;
+        }
+
+        h4 {
+            text-transform: uppercase;
+            font-weight: 600;
         }
 
         ol,
@@ -162,7 +183,7 @@
     Related Posts Section
 ******************/
 .related {
-    border-top: 1px solid $grey-200;
+    border-bottom: 1px solid $grey-200;
     padding: 2em 0;
 
     &__title {

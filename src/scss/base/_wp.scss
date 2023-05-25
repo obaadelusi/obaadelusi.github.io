@@ -1,0 +1,147 @@
+@use '../abstracts' as *;
+
+/* WP Components Styles */
+
+.wp-block-quote {
+    border-left: 6px solid $primary-clr;
+    padding-left: 1em;
+    position: relative;
+    max-width: 480px;
+    margin: 1.5em auto;
+
+    &::after {
+        content: '\e876';
+        font-family: MaterialIcon;
+        font-weight: normal;
+        font-style: normal;
+        text-decoration: none;
+        color: $primary-100;
+        font-size: 2em;
+        opacity: 0.3;
+        position: absolute;
+        top: -22px;
+        left: 10px;
+    }
+
+    p {
+        font-family: $font-sans;
+        margin-bottom: 0.5em;
+    }
+}
+
+.wp-block-pullquote {
+    border-top: 4px solid $grey-200;
+    border-bottom: 4px solid $grey-200;
+    max-width: 480px;
+    margin: 0 auto 1.5em;
+
+    p {
+        font-family: $font-sans;
+    }
+
+    cite {
+        text-transform: uppercase;
+        font-size: 0.75rem;
+        font-style: normal;
+        letter-spacing: 1px;
+        position: static;
+    }
+}
+
+.wp-block-separator {
+    margin: 2.5em;
+    opacity: 0.35;
+}
+
+/**************** 
+   Comments & Post Nav 
+****************/
+.comments-area,
+.post__share {
+    max-width: 740px;
+    margin: 0 auto;
+    padding: 2em 1em;
+
+    @media (min-width: 540px) {
+        padding-left: 2em;
+        padding-right: 2em;
+    }
+}
+
+.comments-area {
+    background-color: $white;
+    margin-bottom: 1em;
+    margin-top: 1em;
+}
+
+.comment {
+    margin-bottom: 2em;
+    margin-top: .5em;
+
+    .children {
+        margin-left: 1em;
+
+        li::marker {
+            content: '📤';
+        }
+    }
+
+    &list li::marker {
+        content: '💬';
+    }
+
+    &-body p {
+        margin: 0;
+    }
+
+    &-reply-link {
+        color: $link-blue;
+    }
+
+    &-edit-link {
+        margin-left: 0.5em;
+        text-decoration: 2px underline $primary-clr;
+    }
+
+    &-meta,
+    &-reply-link,
+    &-edit-link {
+        font-size: 0.875rem;
+    }
+
+    &-meta a:first-of-type {
+        color: $grey-400;
+    }
+
+    &-form {
+
+        &-comment,
+        &-author,
+        &-email,
+        &-url {
+            display: flex;
+            flex-direction: column;
+            gap: .25em;
+        }
+    }
+}
+
+/*===========================
+          PLUGINS
+==============================
+*/
+/**************** 
+   Enlighter - Syntax Highlighter
+****************/
+div.enlighter-v-standard {
+    padding: 1em 0;
+    margin-bottom: 1em;
+}
+
+div.enlighter-default {
+    border-radius: 0.375em;
+}
+
+div[data-type='enlighter/codeblock'] {
+    max-width: 840px;
+}

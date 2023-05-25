@@ -1,13 +1,17 @@
 @use 'base/base';
 @use 'base/defaults';
 @use 'base/typography';
+@use 'base/wp';
+
 @use 'components/buttons';
 @use 'components/figures';
 @use 'components/modals';
+
 @use 'layouts/header';
 @use 'layouts/footer';
 @use 'layouts/forms';
 @use 'layouts/sidebar';
+
 @use 'pages/home';
 @use 'pages/blog';
 @use 'pages/portfolio';

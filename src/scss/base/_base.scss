@@ -26,7 +26,7 @@ picture {
 }
 
 button,
-input,
+input:not([type='checkbox']),
 textarea {
     appearance: none;
     font: inherit;

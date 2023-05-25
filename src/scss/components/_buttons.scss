@@ -22,10 +22,11 @@ button {
     display: inline-flex;
     align-items: center;
     gap: .25em;
-    border: 1.5px solid transparent;
+    border: 1.625px solid transparent;
     border-radius: $border-radius--small;
+    cursor: pointer;
     font-size: 0.875rem;
-    font-weight: 600;
+    font-weight: 600 !important;
     padding: 0.5em 0.625em;
     transition: background-color 180ms ease-out, color 180ms ease-out;
 
@@ -73,8 +74,8 @@ button {
     &-outline--primary {
         @extend .btn;
         background-color: $white;
-        color: $primary-clr;
         border-color: $primary-clr;
+        color: $primary-clr;
 
         &:hover {
             background-color: $primary-clr;

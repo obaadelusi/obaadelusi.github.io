@@ -9,6 +9,7 @@ input,
 textarea {
     background-color: $white;
     border: 2px solid $grey-200;
+    max-width: 100%;
     outline: none;
     padding: .625em 1em;
     transition: border-color 200ms ease;
