@@ -5,7 +5,7 @@
 ******************/
 .header {
     display: flex;
-    flex-wrap: wrap;
+    gap: 1em;
     justify-content: space-between;
     padding: 0.5em 0;
     position: relative;
@@ -21,6 +21,7 @@
         align-items: center;
         gap: 1.25em;
         list-style: none;
+        margin-left: auto;
         padding: 0.625em 1.75em;
 
         li:not(:last-of-type) {
@@ -34,23 +35,17 @@
             font-size: 1.125rem;
         }
 
-        @media (max-width: 500px) {
+        @media (max-width: 595px) {
             display: none;
         }
     }
 
     &__menu-icon {
-        background-color: $grey-bg;
+        background-color: $grey-200;
         border-radius: .25em;
         border: 2px solid transparent;
         color: $black;
         padding: 0.4em 0.5em;
-
-        display: none;
-
-        @media (max-width: 500px) {
-            display: flex;
-        }
 
         &:hover {
             background-color: $grey-200;
@@ -73,7 +68,7 @@
         top: 2.125em;
         overflow: hidden;
         transform-origin: top right;
-        animation: openMenu 200ms ease-out;
+        animation: openMenu 250ms ease-out;
 
         @keyframes openMenu {
             from {
