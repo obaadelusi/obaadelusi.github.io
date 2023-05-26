@@ -46,7 +46,7 @@
         border-radius: 10px;
         position: relative;
         box-shadow: 5px 5px 10px rgba(255, 255, 255, 0.05);
-        background-color: hsl($primary-hue, 12%, 10%);
+        background-color: $grey-bg;
         overflow: hidden;
         transition: border-color 200ms ease-in-out;
 
@@ -56,11 +56,11 @@
 
 
         &__heading {
-            color: $white;
+            color: $black;
             margin-bottom: 0.5em;
 
             em {
-                color: $grey-300;
+                color: $black;
             }
         }
 
@@ -71,9 +71,9 @@
             margin-bottom: 0.75em;
 
             span {
-                background-color: hsl($primary-hue, 12%, 20%);
+                background-color: $grey-200;
+                color: $text-clr;
                 border-radius: $border-radius--small;
-                color: $grey-300;
                 font-size: 0.75rem;
                 padding: 6px 10px;
 
@@ -89,7 +89,7 @@
                         width: 7px;
                         height: 7px;
                         border-radius: 50%;
-                        background-color: green;
+                        background-color: limegreen;
                     }
                 }
             }
@@ -97,11 +97,12 @@
 
         &__desc {
             margin-bottom: 1em;
-            color: $grey-200;
+            color: $text-clr;
         }
 
         &__skills {
-            border-top: 1.5px solid $grey-500;
+            border-top: 2px solid transparent;
+            border-top-color: $grey-200;
             display: flex;
             align-items: center;
             flex-wrap: wrap;
@@ -109,18 +110,18 @@
             padding: 1em 2em;
 
             p {
-                color: $grey-200;
+                color: $text-clr;
                 margin-bottom: 0;
             }
 
             span {
                 cursor: default;
-                background-color: hsl($primary-hue, 12%, 20%);
+                background-color: $grey-200;
+                color: $text-clr;
                 border: 2px dashed transparent;
                 border-radius: $border-radius--large;
-                color: $grey-300;
                 font-size: .875rem;
-                padding: .25em .75em;
+                padding: .25em .625em;
 
                 &:hover {
                     border-color: $primary-clr;
@@ -128,7 +129,7 @@
             }
         }
 
-        &:first-child:after {
+        &::after {
             background: linear-gradient(darkred, $sec-clr);
             content: "";
             clip-path: polygon(0% 0%, 100% 0, 100% 100%, 50% 75%, 0% 100%);
@@ -141,44 +142,51 @@
         }
     }
 
-    :nth-of-type(2) .projects__card {
+    &__project:first-of-type .projects__card {
         background-color: $grey-bg;
+        background-color: hsl($primary-hue, 12%, 10%);
 
         &__heading {
-            color: $grey-400;
-            margin-bottom: 0.5em;
+            color: $white;
 
             em {
-                color: $black;
+                color: $grey-300;
             }
         }
 
         &__badges span {
-            background-color: $grey-200;
-            color: $text-clr;
+            background-color: hsl($primary-hue, 12%, 20%);
+            color: $grey-300;
         }
 
         &__desc {
-            color: $text-clr;
+            color: $grey-200;
         }
 
         &__skills {
-            border-top: 2px solid $grey-200;
+            border-top-color: $grey-500;
 
             p {
-                margin-bottom: 0;
-                color: $text-clr;
+                color: $grey-200;
             }
 
             span {
-                background-color: $grey-200;
-                border-radius: $border-radius--large;
-                color: $text-clr;
+                background-color: hsl($primary-hue, 12%, 20%);
+                color: $grey-300;
             }
         }
 
-        &:first-of-type:first-child:after {
-            background: linear-gradient(darkblue, $link-blue);
-        }
+    }
+
+    &__project:nth-child(2n) .projects__card::after {
+        background: linear-gradient(#000640, #005cad);
+    }
+
+    &__project:nth-child(3n) .projects__card::after {
+        background: linear-gradient(#4e2d10, #b09280);
+    }
+
+    &__project:nth-child(4n) .projects__card::after {
+        background: linear-gradient(#003227, #00b88a);
     }
 }
