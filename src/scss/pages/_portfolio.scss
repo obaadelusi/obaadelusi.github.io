@@ -6,7 +6,7 @@
     Projects Section
 ******************/
 .projects {
-    margin-top: 0 4em;
+    margin-top: 4em;
 
     &__project {
         display: flex;
@@ -116,9 +116,9 @@
 
             span {
                 cursor: default;
-                background-color: $grey-200;
+                background-color: $grey-bg;
                 color: $text-clr;
-                border: 2px dashed transparent;
+                border: 1.5px dashed $grey-300;
                 border-radius: $border-radius--large;
                 font-size: .875rem;
                 padding: .25em .625em;
@@ -171,7 +171,8 @@
             }
 
             span {
-                background-color: hsl($primary-hue, 12%, 20%);
+                background-color: hsl($primary-hue, 12%, 10%);
+                border-color: $grey-500;
                 color: $grey-300;
             }
         }

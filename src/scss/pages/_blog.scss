@@ -132,22 +132,27 @@
                 }
             }
 
-            a {
-                background-color: $white;
-                border: 2px solid $grey-200;
-                border-radius: $border-radius--small;
-                color: $text-clr;
-                font-size: $font-medium;
-                font-weight: 500;
-                padding: .5em .75em;
-                overflow: hidden;
-                white-space: nowrap;
+        }
 
-                &:hover {
-                    // background-color: $primary-100;
-                    border-color: $primary-clr;
-                    text-decoration-color: transparent;
-                }
+        &-item-link {
+            background-color: $white;
+            border: 2px solid $grey-200;
+            border-radius: $border-radius--small;
+            color: $text-clr;
+            font-size: $font-medium;
+            font-weight: 500;
+            padding: .5em .75em;
+            overflow: hidden;
+            white-space: nowrap;
+
+            &.current {
+                background-color: $primary-100;
+                border-color: $primary-clr;
+            }
+
+            &:hover {
+                border-color: $primary-clr;
+                text-decoration-color: transparent;
             }
         }
     }
