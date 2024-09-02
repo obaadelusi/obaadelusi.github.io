@@ -4,7 +4,7 @@
     Typography
 ******************/
 body {
-    font-family: $font-sans;
+  font-family: $font-sans;
 }
 
 /* Heading Styles */
@@ -12,54 +12,54 @@ h1,
 h2,
 h3,
 h4 {
-    font-weight: 500;
-    margin-bottom: 0.3em;
-    line-height: 1;
+  font-weight: 500;
+  margin-bottom: 0.3em;
+  line-height: 1;
 }
 
 :is(h1, h2, h3) span {
-    color: $primary-clr;
+  color: $primary-clr;
 }
 
 h1,
 h2 {
-    font-family: $font-display;
+  font-family: $font-display;
 }
 
 h1 {
-    font-size: $h1;
+  font-size: $h1;
 }
 
 h2 {
-    font-size: $h2;
+  font-size: $h2;
 }
 
 h3 {
-    font-size: $h3;
+  font-size: $h3;
 }
 
 /* Link Styles */
 a {
-    font-size: inherit;
-    color: $link-blue;
-    text-decoration: underline 2px transparent;
-    transition: text-decoration-color 200ms ease-in-out;
+  font-size: inherit;
+  color: $link-blue;
+  text-decoration: underline 2px transparent;
+  transition: text-decoration-color 200ms ease-in-out;
 
-    &:focus,
-    &:focus-visible {
-        border-color: $primary-clr;
-        outline-color: $primary-clr;
-    }
+  &:focus,
+  &:focus-visible {
+    border-color: $primary-clr;
+    outline-color: $primary-clr;
+  }
 
-    &:hover {
-        text-decoration-color: $link-blue;
-    }
+  &:hover {
+    text-decoration-color: $link-blue;
+  }
 }
 
 /* Paragraph Styles */
 p {
-    color: $text-clr;
-    font-size: $font-regular;
-    line-height: 1.4;
-    margin-bottom: 1em;
+  color: $text-clr;
+  font-size: $font-regular;
+  line-height: 1.4;
+  margin-bottom: 1em;
 }

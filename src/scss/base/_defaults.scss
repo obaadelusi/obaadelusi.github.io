@@ -7,70 +7,70 @@
 /* Element Defaults */
 input,
 textarea {
-    background-color: $white;
-    border: 2px solid $grey-200;
-    max-width: 100%;
-    outline: none;
-    padding: .625em 1em;
-    transition: border-color 200ms ease;
+  background-color: $white;
+  border: 2px solid $grey-200;
+  max-width: 100%;
+  outline: none;
+  padding: 0.625em 1em;
+  transition: border-color 200ms ease;
 
-    &:hover {
-        border-color: $primary-clr;
-    }
+  &:hover {
+    border-color: $primary-clr;
+  }
 
-    &:focus {
-        border-color: $primary-clr;
-    }
+  &:focus {
+    border-color: $primary-clr;
+  }
 }
 
 /* Containers */
 .container {
-    display: flex;
-    width: 100%;
-    max-width: 1300px;
-    margin: auto;
+  display: flex;
+  width: 100%;
+  max-width: 1300px;
+  margin: auto;
 }
 
 .container-fluid {
-    width: 100%;
-    // max-width: 1400px;
+  width: 100%;
+  // max-width: 1400px;
 }
 
 /* Section Header */
 .section-header {
-    text-align: center;
-    margin-bottom: 2em;
+  text-align: center;
+  margin-bottom: 2em;
 
-    h2 {
-        font-size: $h2;
-    }
+  h2 {
+    font-size: $h2;
+  }
 
-    p {
-        color: $grey-500;
-    }
+  p {
+    color: $grey-500;
+  }
 }
 
 /* Page Heading */
 .page-heading {
-    // background-color: $grey-bg;
-    border-radius: $border-radius--medium;
-    margin-top: 1em;
-    padding: 3em 0;
+  // background-color: $grey-bg;
+  border-radius: $border-radius--medium;
+  margin-top: 1em;
+  padding: 3em 0;
 
-    p {
-        margin-bottom: 0;
-    }
+  p {
+    margin-bottom: 0;
+  }
 }
 
 /* Helpers */
 .mt-0 {
-    margin-top: 0;
+  margin-top: 0;
 }
 
 .mt-1 {
-    margin-top: 0.5em;
+  margin-top: 0.5em;
 }
 
 .grey-400 {
-    color: $grey-400 !important;
+  color: $grey-400 !important;
 }

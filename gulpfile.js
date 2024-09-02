@@ -10,45 +10,45 @@ const browsersync = require('browser-sync').create();
 
 // Sass Task
 function scssTask() {
-   return src('src/scss/main.scss', { sourcemaps: true })
-      .pipe(sass())
-      .pipe(postcss([autoprefixer(), cssnano()]))
-      .pipe(dest('build/css', { sourcemaps: '.' }));
+  return src('src/scss/main.scss', { sourcemaps: true })
+    .pipe(sass())
+    .pipe(postcss([autoprefixer(), cssnano()]))
+    .pipe(dest('build/css', { sourcemaps: '.' }));
 }
 
 // JavaScript Task
 function jsTask() {
-   return src('src/js/*.js', { sourcemaps: true })
-      .pipe(babel({ presets: ['@babel/preset-env'] }))
-      .pipe(terser())
-      .pipe(dest('build/js', { sourcemaps: '.' }));
+  return src('src/js/*.js', { sourcemaps: true })
+    .pipe(babel({ presets: ['@babel/preset-env'] }))
+    .pipe(terser())
+    .pipe(dest('build/js', { sourcemaps: '.' }));
 }
 
 // Browsersync
 function browserSyncServe(cb) {
-   browsersync.init({
-      server: {
-         baseDir: '.'
+  browsersync.init({
+    server: {
+      baseDir: '.',
+    },
+    notify: {
+      styles: {
+        top: 'auto',
+        bottom: '0',
       },
-      notify: {
-         styles: {
-            top: 'auto',
-            bottom: '0'
-         }
-      }
-   });
-   cb();
+    },
+  });
+  cb();
 }
 function browserSyncReload(cb) {
-   browsersync.reload();
-   cb();
+  browsersync.reload();
+  cb();
 }
 
 // Watch Task
 function watchTask() {
-   watch(['*.html', 'views/*.html'], browserSyncReload);
-   watch(['src/scss/**/*.scss'], series(scssTask, browserSyncReload));
-   watch(['src/js/*.js'], series(jsTask, browserSyncReload));
+  watch(['*.html', 'views/*.html'], browserSyncReload);
+  watch(['src/scss/**/*.scss'], series(scssTask, browserSyncReload));
+  watch(['src/js/*.js'], series(jsTask, browserSyncReload));
 }
 
 // Default Gulp Task

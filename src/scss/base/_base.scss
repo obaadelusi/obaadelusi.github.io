@@ -2,45 +2,45 @@
     Reset/Base
 ******************/
 html {
-    scroll-behavior: smooth;
+  scroll-behavior: smooth;
 }
 
 *,
 *::before,
 *::after {
-    box-sizing: border-box;
-    margin: 0;
-    padding: 0;
+  box-sizing: border-box;
+  margin: 0;
+  padding: 0;
 }
 
 body {
-    margin: auto;
-    min-height: 100vh;
-    position: relative;
+  margin: auto;
+  min-height: 100vh;
+  position: relative;
 }
 
 img,
 picture {
-    display: block;
-    max-width: 100%;
+  display: block;
+  max-width: 100%;
 }
 
 button,
 input:not([type='checkbox']),
 textarea {
-    appearance: none;
-    font: inherit;
+  appearance: none;
+  font: inherit;
 }
 
 ul,
 ol {
-    padding-inline-start: 0;
+  padding-inline-start: 0;
 }
 
 a {
-    text-decoration: none;
+  text-decoration: none;
 }
 
 [hidden] {
-    display: none !important;
+  display: none !important;
 }

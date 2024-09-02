@@ -4,82 +4,84 @@
     Buttons
 ******************/
 button {
-    display: flex;
-    justify-content: center;
-    align-items: center;
-    border: none;
-    cursor: pointer;
-    outline: none;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  border: none;
+  cursor: pointer;
+  outline: none;
 
-    &:focus,
-    &:focus-visible {
-        border-color: $primary-clr;
-        outline-color: $primary-clr;
-    }
+  &:focus,
+  &:focus-visible {
+    border-color: $primary-clr;
+    outline-color: $primary-clr;
+  }
 }
 
 .btn {
-    display: inline-flex;
-    align-items: center;
-    gap: .25em;
-    border: 1.625px solid transparent;
-    border-radius: $border-radius--small;
-    cursor: pointer;
-    font-size: 0.875rem;
-    font-weight: 600 !important;
-    padding: 0.5em 0.625em;
-    transition: background-color 180ms ease-out, color 180ms ease-out;
+  display: inline-flex;
+  align-items: center;
+  gap: 0.25em;
+  border: 1.625px solid transparent;
+  border-radius: $border-radius--small;
+  cursor: pointer;
+  font-size: 0.875rem;
+  font-weight: 600 !important;
+  padding: 0.5em 0.625em;
+  transition:
+    background-color 180ms ease-out,
+    color 180ms ease-out;
 
-    @media (min-width: 600px) {
-        padding: 0.75em 0.875em;
-    }
+  @media (min-width: 600px) {
+    padding: 0.75em 0.875em;
+  }
+
+  &:hover {
+    text-decoration: none;
+  }
+
+  &--black {
+    @extend .btn;
+    background-color: $black;
+    color: $white;
 
     &:hover {
-        text-decoration: none;
+      background-color: $grey-500;
     }
+  }
 
-    &--black {
-        @extend .btn;
-        background-color: $black;
-        color: $white;
+  &-outline--black {
+    @extend .btn;
+    background-color: $white;
+    color: $black;
+    border-color: $black;
 
-        &:hover {
-            background-color: $grey-500
-        }
+    &:hover {
+      background-color: $black;
+      color: $white;
     }
+  }
 
-    &-outline--black {
-        @extend .btn;
-        background-color: $white;
-        color: $black;
-        border-color: $black;
+  &--primary {
+    @extend .btn;
+    background-color: $primary-clr;
+    color: $white;
 
-        &:hover {
-            background-color: $black;
-            color: $white;
-        }
+    &:hover {
+      background-color: $white;
+      color: $primary-clr;
     }
+  }
 
-    &--primary {
-        @extend .btn;
-        background-color: $primary-clr;
-        color: $white;
+  &-outline--primary {
+    @extend .btn;
+    background-color: $white;
+    border-color: $primary-clr;
+    color: $primary-clr;
 
-        &:hover {
-            background-color: $white;
-            color: $primary-clr;
-        }
+    &:hover {
+      background-color: $primary-clr;
+      color: $white;
     }
-
-    &-outline--primary {
-        @extend .btn;
-        background-color: $white;
-        border-color: $primary-clr;
-        color: $primary-clr;
-
-        &:hover {
-            background-color: $primary-clr;
-            color: $white;
-        }
-    }
+  }
 }

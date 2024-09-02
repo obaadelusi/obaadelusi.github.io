@@ -4,40 +4,40 @@
     Footer Section
 ******************/
 .footer {
-    border-top: 1px solid $grey-200;
-    height: 80px;
+  border-top: 1px solid $grey-200;
+  height: 80px;
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+  flex-wrap: wrap;
+  margin-top: 1em;
+
+  &__nav {
     display: flex;
-    justify-content: space-between;
     align-items: center;
-    flex-wrap: wrap;
-    margin-top: 1em;
+    column-gap: 20px;
+  }
 
-    &__nav {
-        display: flex;
-        align-items: center;
-        column-gap: 20px;
+  &__logo {
+    max-width: 140px;
+  }
+
+  &__links {
+    list-style: none;
+    display: flex;
+    column-gap: 10px;
+
+    li {
+      font-size: $font-medium;
     }
+  }
 
-    &__logo {
-        max-width: 140px;
+  &__copyright {
+    color: $grey-400;
+
+    @media (max-width: 450px) {
+      width: 100%;
+      text-align: center;
     }
-
-    &__links {
-        list-style: none;
-        display: flex;
-        column-gap: 10px;
-
-        li {
-            font-size: $font-medium;
-        }
-    }
-
-    &__copyright {
-        color: $grey-400;
-
-        @media(max-width: 450px) {
-            width: 100%;
-            text-align: center;
-        }
-    }
+  }
 }

@@ -6,224 +6,223 @@
     Content Section
 ******************/
 .post {
-    @media (min-width:800px) {
-        padding: 0 3em 0 0;
+  @media (min-width: 800px) {
+    padding: 0 3em 0 0;
+  }
+
+  &__category {
+    display: flex;
+    align-items: center;
+    flex-wrap: wrap;
+    margin-bottom: 0.75em;
+
+    &-item {
+      background-color: $grey-100;
+      border-right: 1px solid $grey-300;
+      color: $black;
+      font-size: $font-small;
+      font-weight: 500;
+      padding: 0.5em 0.75em;
+      white-space: nowrap;
+
+      &:first-of-type {
+        border-top-left-radius: 4px;
+        border-bottom-left-radius: 4px;
+      }
+
+      &:last-of-type {
+        border-top-right-radius: 4px;
+        border-bottom-right-radius: 4px;
+        border-right: none;
+      }
+    }
+  }
+
+  &__header {
+    margin-top: 6.5em;
+  }
+
+  &__title {
+    font-size: calc($h1 + 0.5vw);
+    line-height: 1.25em;
+  }
+
+  &__excerpt {
+    color: $grey-500;
+    font-size: $h3;
+    margin-bottom: 1em;
+    line-height: 1.5em;
+  }
+
+  &__featured {
+    height: 220px;
+
+    @media screen and (min-width: 440px) {
+      height: 340px;
     }
 
-    &__category {
-        display: flex;
-        align-items: center;
-        flex-wrap: wrap;
-        margin-bottom: 0.75em;
-
-        &-item {
-            background-color: $grey-100;
-            border-right: 1px solid $grey-300;
-            color: $black;
-            font-size: $font-small;
-            font-weight: 500;
-            padding: 0.5em 0.75em;
-            white-space: nowrap;
-
-            &:first-of-type {
-                border-top-left-radius: 4px;
-                border-bottom-left-radius: 4px;
-            }
-
-            &:last-of-type {
-                border-top-right-radius: 4px;
-                border-bottom-right-radius: 4px;
-                border-right: none;
-            }
-        }
+    @media screen and (min-width: 640px) {
+      height: 400px;
     }
 
-    &__header {
-        margin-top: 6.5em;
+    @media screen and (min-width: 800px) {
+      height: 480px;
     }
 
-    &__title {
-        font-size: calc($h1 + 0.5vw);
-        line-height: 1.25em;
+    img {
+      object-fit: cover;
+      object-position: bottom center;
+      height: 100%;
+      width: 100%;
+      margin-bottom: 0.5em;
+    }
+  }
+
+  &__author {
+    display: flex;
+    align-items: center;
+    gap: 0.5em;
+
+    &-image {
+      background-color: $grey-200;
+      border-radius: 50%;
+      overflow: hidden;
+      height: 40px;
+      width: 40px;
     }
 
-    &__excerpt {
-        color: $grey-500;
-        font-size: $h3;
-        margin-bottom: 1em;
-        line-height: 1.5em;
+    &-text i {
+      color: $grey-400;
+    }
+  }
+
+  &__share {
+    padding: 0;
+    list-style: none;
+    display: flex;
+    flex-wrap: wrap;
+    gap: 0.5em;
+    margin: 1em 0;
+
+    li {
+      background-color: $grey-bg;
+      border-radius: $border-radius--medium;
+      display: inline-flex;
+      align-items: center;
+      gap: 0.5em;
+      font-size: $font-medium;
+      padding: 0.5em 0.875em;
+
+      a {
+        color: $text-clr;
+      }
+
+      span {
+        font-size: $font-medium;
+        color: $primary-clr;
+      }
+    }
+  }
+
+  &__content {
+    padding: 2em 0;
+    margin: 1em auto 1em 0;
+    border-bottom: 1px solid $grey-200;
+
+    a {
+      text-decoration-line: underline;
     }
 
-    &__featured {
-        height: 220px;
-
-        @media screen and (min-width: 440px) {
-            height: 340px;
-        }
-
-        @media screen and (min-width: 640px) {
-            height: 400px;
-        }
-
-        @media screen and (min-width: 800px) {
-            height: 480px;
-        }
-
-        img {
-            object-fit: cover;
-            object-position: bottom center;
-            height: 100%;
-            width: 100%;
-            margin-bottom: 0.5em;
-        }
+    code {
+      background-color: $primary-100;
+      border: 2px solid $grey-200;
+      border-radius: $border-radius--small;
+      color: hsl(10, 90%, 40%);
+      font-family: $font-mono;
+      font-size: clamp($font-medium, 2vw, $font-regular);
+      padding: 0.125em 0.25em;
     }
 
-    &__author {
-        display: flex;
-        align-items: center;
-        gap: .5em;
-
-        &-image {
-            background-color: $grey-200;
-            border-radius: 50%;
-            overflow: hidden;
-            height: 40px;
-            width: 40px;
-        }
-
-        &-text i {
-            color: $grey-400;
-        }
+    em code {
+      background-color: hsl($primary-hue, 45%, 35%);
+      color: $white;
     }
 
-    &__share {
-        padding: 0;
-        list-style: none;
-        display: flex;
-        flex-wrap: wrap;
-        gap: .5em;
-        margin: 1em 0;
-
-
-        li {
-            background-color: $grey-bg;
-            border-radius: $border-radius--medium;
-            display: inline-flex;
-            align-items: center;
-            gap: .5em;
-            font-size: $font-medium;
-            padding: .5em .875em;
-
-            a {
-                color: $text-clr;
-            }
-
-            span {
-                font-size: $font-medium;
-                color: $primary-clr;
-            }
-        }
+    h2,
+    h3,
+    h4 {
+      margin-top: 1.25em;
+      line-height: 1.2;
     }
 
-    &__content {
-        padding: 2em 0;
-        margin: 1em auto 1em 0;
-        border-bottom: 1px solid $grey-200;
-
-        a {
-            text-decoration-line: underline;
-        }
-
-        code {
-            background-color: $primary-100;
-            border: 2px solid $grey-200;
-            border-radius: $border-radius--small;
-            color: hsl(10, 90%, 40%);
-            font-family: $font-mono;
-            font-size: clamp($font-medium, 2vw, $font-regular);
-            padding: .125em .25em;
-        }
-
-        em code {
-            background-color: hsl($primary-hue, 45%, 35%);
-            color: $white;
-        }
-
-        h2,
-        h3,
-        h4 {
-            margin-top: 1.25em;
-            line-height: 1.2;
-        }
-
-        h4 {
-            text-transform: uppercase;
-            font-weight: 600;
-        }
-
-        ol,
-        ul {
-            padding-inline-start: 1.5em;
-        }
-
-        p,
-        li {
-            font-size: $h4;
-            line-height: 1.75;
-            margin-bottom: 1.5em;
-        }
-
-        li:not(:last-of-type) {
-            line-height: 1.5;
-            margin-bottom: 1em;
-        }
-
-        @media (min-width: 600px) {
-            max-width: 700px;
-        }
+    h4 {
+      text-transform: uppercase;
+      font-weight: 600;
     }
 
-    &__meta {
-        border-bottom: 1px solid $grey-200;
-        padding: 0.5em 0 1.5em;
-
-        &_container {
-            background-color: $grey-bg;
-            border-radius: $border-radius--medium;
-            padding: 1.5em 1em;
-        }
-
-        &_categories,
-        &_tags {
-            display: flex;
-            gap: .5em;
-            align-items: baseline;
-
-            h4,
-            p {
-                margin: 0;
-            }
-        }
+    ol,
+    ul {
+      padding-inline-start: 1.5em;
     }
+
+    p,
+    li {
+      font-size: $h4;
+      line-height: 1.75;
+      margin-bottom: 1.5em;
+    }
+
+    li:not(:last-of-type) {
+      line-height: 1.5;
+      margin-bottom: 1em;
+    }
+
+    @media (min-width: 600px) {
+      max-width: 700px;
+    }
+  }
+
+  &__meta {
+    border-bottom: 1px solid $grey-200;
+    padding: 0.5em 0 1.5em;
+
+    &_container {
+      background-color: $grey-bg;
+      border-radius: $border-radius--medium;
+      padding: 1.5em 1em;
+    }
+
+    &_categories,
+    &_tags {
+      display: flex;
+      gap: 0.5em;
+      align-items: baseline;
+
+      h4,
+      p {
+        margin: 0;
+      }
+    }
+  }
 }
 
 /*****************
     Related Posts Section
 ******************/
 .related {
-    border-bottom: 1px solid $grey-200;
-    padding: 2em 0;
+  border-bottom: 1px solid $grey-200;
+  padding: 2em 0;
 
-    &__title {
-        margin-bottom: .25em;
+  &__title {
+    margin-bottom: 0.25em;
+  }
+
+  &__posts {
+    list-style: inside;
+    padding: 0;
+
+    li {
+      margin: 1em 0;
     }
-
-    &__posts {
-        list-style: inside;
-        padding: 0;
-
-        li {
-            margin: 1em 0;
-        }
-    }
+  }
 }

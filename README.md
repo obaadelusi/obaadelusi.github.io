@@ -1,11 +1,11 @@
 <h1 align="center">Hi 👋, I'm Oba</h1>
 <h3 align="center">Software Developer</h3>
 
--   🔭 I’m currently working on an **ERP project**
+- 🔭 I’m currently working on an **ERP project**
 
--   📝 I write articles on [whatobathinks.com](https://whatobathinks.com)
+- 📝 I write articles on [whatobathinks.com](https://whatobathinks.com)
 
--   📫 Reach me on **adelusiobafunsho@gmail.com**
+- 📫 Reach me on **adelusiobafunsho@gmail.com**
 
 <h3 align="left">Connect with me:</h3>
 <p align="left">

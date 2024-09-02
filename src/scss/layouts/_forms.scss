@@ -4,45 +4,44 @@
     Form Layout
 ******************/
 .form {
-    max-width: 400px;
-    margin: 0 auto;
+  max-width: 400px;
+  margin: 0 auto;
 
-    &__heading {
-        text-align: center;
-        margin-bottom: 1em;
-    }
+  &__heading {
+    text-align: center;
+    margin-bottom: 1em;
+  }
 
-    &__control {
-        display: flex;
-        flex-direction: column;
-        gap: .125em;
-        margin-bottom: 2em;
-    }
+  &__control {
+    display: flex;
+    flex-direction: column;
+    gap: 0.125em;
+    margin-bottom: 2em;
+  }
 
-    label {
-        color: $text-clr;
-        cursor: pointer;
-        font-size: $font-medium;
-    }
+  label {
+    color: $text-clr;
+    cursor: pointer;
+    font-size: $font-medium;
+  }
 
-    input[type="text"],
-    input[type="tel"],
-    input[type="email"],
-    textarea {
-        border-radius: $border-radius--small;
-    }
+  input[type='text'],
+  input[type='tel'],
+  input[type='email'],
+  textarea {
+    border-radius: $border-radius--small;
+  }
 
-    .input-error {
-        color: red;
-        font-size: $font-small;
-        margin-bottom: 0;
-        text-align: end;
-    }
+  .input-error {
+    color: red;
+    font-size: $font-small;
+    margin-bottom: 0;
+    text-align: end;
+  }
 
-    &__buttons {
-        display: flex;
-        column-gap: 1em;
-        justify-content: end;
-    }
-
+  &__buttons {
+    display: flex;
+    column-gap: 1em;
+    justify-content: end;
+  }
 }
