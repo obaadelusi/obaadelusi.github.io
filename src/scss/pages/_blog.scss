@@ -37,6 +37,7 @@
 
         a {
           color: $black;
+          text-decoration: underline solid $link-blue 2px;
 
           &:hover {
             text-decoration-color: transparent;
