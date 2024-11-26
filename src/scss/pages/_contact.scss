@@ -25,30 +25,31 @@
     Social links
 ******************/
 .social {
-  margin-top: 4em;
-  text-align: center;
+  margin-top: 1em;
+  margin-bottom: 4em;
 
   &__links {
-    background-color: $grey-bg;
-    border-radius: $border-radius--small;
     list-style: none;
-    width: fit-content;
-    margin: 0 auto;
-    padding: 0;
-    display: flex;
-    align-items: center;
-    justify-content: space-between;
-    overflow: hidden;
 
     li {
-      display: flex;
-      align-items: center;
+      padding: 0.25em 0.5em;
+      margin-bottom: 1em;
       gap: 0.5em;
       background-color: $black;
       cursor: pointer;
+      border-radius: 0.5em;
+      font-size: $h4;
+
+      &:nth-of-type(1) {
+        background-color: darkgreen;
+      }
+
+      &:nth-of-type(2) {
+        background-color: darkblue;
+      }
 
       &:hover {
-        background-color: $primary-clr;
+        background-color: $link-blue;
       }
     }
 

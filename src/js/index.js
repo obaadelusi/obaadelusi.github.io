@@ -32,9 +32,13 @@ function showModal() {
   const modal = document.getElementById('modal');
 
   const contactName = document.getElementById('name').value;
+  const contactEmail = document.getElementById('email').value;
+  const contactMessage = document.getElementById('message').value;
+
+  const emailMessage = `Message from: ${contactName} - (${contactEmail}). \nMessage: ${contactMessage}`;
 
   document.getElementById('modal-wrapper').innerHTML =
-    `<h3>Hey ${contactName} ✅,</h3> <p>Thank you for saying hi. <br> Will respond by email shortly.</p><button class="btn--black" id="close-modal">Close</button>`;
+    `<h3>Hey ${contactName} ✅,</h3> <p>Thank you for sending a message. <br> Send the email and I will respond by email shortly.</p><button class="btn--black" id="close-modal">Close</button>`;
 
   modal.classList.add('show');
 
@@ -42,7 +46,9 @@ function showModal() {
   closeModalBtn.addEventListener('click', () => {
     modal.classList.remove('show');
 
-    window.location.replace('https://obaadelusi.github.io');
+    window.location.replace(
+      `mailto:adelusiobafunsho@gmail.com?subject=Message%20from%20${contactName}&body=${emailMessage}`
+    );
   });
 }
 
