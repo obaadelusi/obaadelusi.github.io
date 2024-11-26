@@ -10,10 +10,13 @@ function load() {
     mobileMenu.classList.toggle('active');
   });
 
-  // Validate form
-  document.getElementById('reset').addEventListener('click', clearFields);
+  // Add current year text to footer
+  document.getElementById('footerYear').innerText = new Date().getFullYear();
 
-  document.getElementById('contact-form').addEventListener('submit', (e) => {
+  // Validate form
+  document.getElementById('reset')?.addEventListener('click', clearFields);
+
+  document.getElementById('contact-form')?.addEventListener('submit', (e) => {
     e.preventDefault();
     hideErrors();
 
