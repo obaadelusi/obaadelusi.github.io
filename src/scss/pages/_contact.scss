@@ -30,36 +30,43 @@
 
   &__links {
     list-style: none;
+    display: flex;
+    flex-direction: column;
+    gap: 1em;
 
     li {
-      padding: 0.25em 0.5em;
-      margin-bottom: 1em;
-      gap: 0.5em;
-      background-color: $black;
+      background: linear-gradient(to right, $grey-bg, $grey-200);
+      padding: 0.25em 1em;
       cursor: pointer;
       border-radius: 0.5em;
       font-size: $h4;
+      font-weight: 500;
 
       &:nth-of-type(1) {
-        background-color: darkgreen;
+        color: #FF2724;
       }
 
       &:nth-of-type(2) {
-        background-color: darkblue;
+        color: #0072B1;
+      }
+
+      &:nth-of-type(3) {
+        color: $black;
       }
 
       &:hover {
-        background-color: $link-blue;
+        color: $link-blue;
+        transition: background-color 300ms ease-out;
       }
     }
 
     a {
-      color: $white;
-      display: block;
-      height: 100%;
-      padding: 1em;
+      display: flex;
+      align-items: center;
+      gap: 1em;
+      color: inherit;
+      padding: 1em 0.125em;
       text-decoration-color: transparent;
-      width: 100%;
     }
   }
 }
