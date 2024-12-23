@@ -26,14 +26,21 @@
 
     &__content {
       display: grid;
-      flex: 0 1 76%;
+      grid-template-rows: 24px auto 22px;
+      flex: 0 1 75%;
+      height: 120px;
+
+      @media (min-width: 600px) {
+        height: 160px;
+        grid-template-rows: 24px auto 1fr 22px;
+      }
 
       h3 {
         font-size: $h3;
-        margin: 0 0 6px;
+        margin-bottom: 4px;
         letter-spacing: 0;
         line-height: 1.2;
-        align-self: end;
+        align-self: start;
 
         a {
           color: $link-blue;
@@ -57,12 +64,12 @@
     }
 
     &__date {
+      align-self: start;
       color: $grey-400;
-      align-self: end;
     }
 
     &__meta {
-      align-self: center;
+      align-self: end;
 
       span {
         color: $text-clr;
@@ -80,10 +87,10 @@
     }
 
     &__image {
+      flex: 1 0 30%;
+      height: 120px;
       border-radius: $border-radius--small;
       overflow: hidden;
-      width: 120px;
-      height: 120px;
 
       img {
         object-fit: cover;
@@ -92,8 +99,7 @@
       }
 
       @media (min-width: 600px) {
-        width: 220px;
-        height: 180px;
+        height: 160px;
       }
     }
   }
