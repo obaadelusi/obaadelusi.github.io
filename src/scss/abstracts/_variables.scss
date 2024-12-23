@@ -2,9 +2,10 @@
     Variables
 ******************/
 
-$font-sans: -apple-system, BlinkMacSystemFont, 'Inter', system-ui, sans-serif;
-$font-display: 'DM Serif Display', serif;
-$font-mono: 'JetBrains Mono', monospace;
+$font-sans: -apple-system, BlinkMacSystemFont, 'Inter', sans-serif, system-ui;
+$font-serif: 'Ovo', serif, system-ui;
+$font-display: 'DM Serif Display', serif, system-ui;
+$font-mono: 'JetBrains Mono', monospace, system-ui;
 
 $h1: clamp(2rem, 4vw, 2.75rem);
 $h2: clamp(1.75rem, 3vw, 2rem);

@@ -56,9 +56,10 @@ a {
   }
 }
 
-/* Paragraph Styles */
+/* Paragraph and List Styles */
 p {
   color: $text-clr;
+  font-family: $font-serif;
   font-size: $font-regular;
   line-height: 1.4;
   margin-bottom: 1em;

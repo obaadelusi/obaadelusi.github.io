@@ -36,11 +36,11 @@
         line-height: 1.2;
 
         a {
-          color: $black;
-          text-decoration: underline solid $link-blue 2px;
+          color: $link-blue;
+          text-decoration: underline solid transparent 2px;
 
           &:hover {
-            text-decoration-color: transparent;
+            text-decoration-color: $link-blue;
             color: $primary-clr;
           }
         }
