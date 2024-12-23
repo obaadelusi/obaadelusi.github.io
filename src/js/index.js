@@ -11,7 +11,7 @@ function load() {
   });
 
   // Add current year text to footer
-  document.getElementById('footerYear').innerText = new Date().getFullYear();
+  document.getElementById('footerYear')?.innerText = new Date().getFullYear();
 
   // Validate form
   document.getElementById('reset')?.addEventListener('click', clearFields);
